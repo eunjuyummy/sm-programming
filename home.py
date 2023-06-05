@@ -6,19 +6,19 @@ from PIL import Image
 def bmi_range(bmi):
     if bmi >= 25:
         st.error("비만 입니다")
-        image = Image.open('/home/ubuntu/바탕화면/my/koala.jpg')
+        image = Image.open('koala.jpg')
         st.image(image, caption='cute koala')
     elif bmi >= 23:
         st.warning("과체중 입니다")
-        image = Image.open('/home/ubuntu/바탕화면/my/koala.jpg')
+        image = Image.open('koala.jpg')
         st.image(image, caption='cute koala')
     elif bmi >= 18.5:
         st.success("정상 입니다.")
-        image = Image.open('/home/ubuntu/바탕화면/my/koala.jpg')
+        image = Image.open('koala.jpg')
         st.image(image, caption='cute koala')
     else:
         st.warning("저체중 입니다")    
-        image = Image.open('/home/ubuntu/바탕화면/my/koala.jpg')
+        image = Image.open('koala.jpg')
         st.image(image, caption='혹시 당신 초식동물?')   
         
 # 체질량 지수 구하는 
@@ -52,7 +52,7 @@ if add_selectbox == "체질량 계산기":
 elif add_selectbox == "Gap minder":
     st.write("# 여기는 Gap minder입니다.")
 
-    data = pd.read_excel('/home/ubuntu/바탕화면/my/gapminder-2.xlsx')
+    data = pd.read_excel('gapminder-2.xlsx')
     
     st.write(data)
     
