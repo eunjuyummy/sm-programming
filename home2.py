@@ -76,7 +76,7 @@ elif add_selectbox == "Gap minder":
     data = data[data['year']==year]
     
     fig, ax = plt.subplots()
-    ax.scatter(data['gdpPercap'], data['lifeExp'], s=data['pop']*0.000002, color=data['colors'])
+    ax.scatter(data['gdpPercap'], data['lifeExp'], s=data['pop']*0.000002, color=colors)
     ax.set_title("How Does Gap per Capital relate to Life Expectancy?")
     ax.set_xlabel("Gap per Capital")
     ax.set_ylabel('Life Expectancy')
