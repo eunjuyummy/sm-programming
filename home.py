@@ -1,24 +1,7 @@
 import streamlit as st
 
-st.write('# Hi! Welcome to My App!')
+# 체질량 지수 구하는 
+# 몸무게, 키 입력 받기
 
-if st.button('Say hello'):
-    st.write('Why hello there')
-else:
-    st.write('Goodbye')
-
-option = st.selectbox(
-    '좋아하는 동물은?',
-    ('강아지', '고양이', '양', '토끼', '코끼리'))
-
-st.write('내가 좋아하는 동물은', option, '입니다.')
-st.write(f'좋아하는 동물은 {option} 입니다.')
-
-txt = st.text_area('자신을 소개해보세요.', '''
-    
-''')
-st.write('입력한 내용은:', txt)
-
-age = st.slider('나이를 선택하세요', 0, 130, 25)
-st.write("저의 나이는", age, '입니다.')
-
+height = st.number_input('키를 입력하세요. (cm)',100,200,170,5)
+st.write('키:', height,'cm')
