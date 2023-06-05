@@ -52,7 +52,7 @@ if add_selectbox == "체질량 계산기":
 elif add_selectbox == "Gap minder":
     st.write("# 여기는 Gap minder입니다.")
 
-    data = pd.read_excel('gapminder-2.xlsx')
+    data = pd.read_csv('gapminder-2.csv')
     
     st.write(data)
     
