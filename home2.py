@@ -55,7 +55,21 @@ elif add_selectbox == "Gap minder":
     data = pd.read_csv('gapminder.csv')
     
     st.write(data)
-         
+    
+    colors=[]
+    
+    for x in data['continent']:
+        if x == 'Asia':
+            colors.append('tomato')
+        elif x == 'Europe':
+            colors.append('blue')
+        elif x == 'Africa':
+            colors.append('olive')
+        elif x == 'Americas':
+            colors.append('green')
+        else:
+            colors.append('orange')
+            
     year = st.slider('연도를 선택하세요.', 1952, 2007, 1952, step = 5)
     st.write("year: ", year, '입니다.')
 
