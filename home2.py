@@ -55,8 +55,6 @@ elif add_selectbox == "Gap minder":
     data = pd.read_csv('gapminder.csv')
     
     st.write(data)
-    
-  
          
     year = st.slider('연도를 선택하세요.', 1952, 2007, 1952, step = 5)
     st.write("year: ", year, '입니다.')
@@ -64,7 +62,7 @@ elif add_selectbox == "Gap minder":
     data = data[data['year']==year]
     
     fig, ax = plt.subplots()
-    ax.scatter(data['gdpPercap'], data['lifeExp'], s=data['pop']*0.000002)
+    ax.scatter(data['gdpPercap'], data['lifeExp'], s=data['pop']*0.000002, color=data['colors'])
     ax.set_title("How Does Gap per Capital relate to Life Expectancy?")
     ax.set_xlabel("Gap per Capital")
     ax.set_ylabel('Life Expectancy')
