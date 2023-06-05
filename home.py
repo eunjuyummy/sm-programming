@@ -31,6 +31,6 @@ if st.button('계산'):
     
 st.balloons()
 
-image = Image.open('https://github.com/eunjuyummy/sm-programming/blob/main/koala.jpg')
+image = Image.open('/eunjuyummy/sm-programming/blob/main/koala.jpg')
 
 st.image(image, caption='cute koala')
