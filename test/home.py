@@ -73,18 +73,15 @@ if add_selectbox == "Movie Lens":
     st.subheader('Our top 5 movie picks ')
 else:
    # Streamlit application settings
-    st.title('영화 추천 시스템')
-    st.write('새로운 영화 추가')
-
+    st.title('Add a new movie')
+    st.subheader('Movie List')
+    st.write(movie_df)
+    
     # Prompt the user for movie details
-    new_title = st.text_input('영화 제목')
+    new_title = st.text_input('title')
     genres = movie_df['parsed_genres'].unique()
-    new_genre = st.selectbox('장르 선택', genres)
+    new_genre = st.selectbox('genres', genres)
     new_rating = st.slider('How old are you?', 0.0, 5.0, 0.5)
     # Add the new movie to the DataFrame
     new_movie = {'title': new_title, 'parsed_genres': new_genre, 'rating': new_rating}
-    #movie_df = movie_df.append(new_movie, ignore_index=True)
-
-    # Display the updated DataFrame
-    st.subheader('업데이트된 영화 목록')
-    st.write(movie_df)     
+    st.write('new_movie ','title: ', new_title, 'parsed_genres: 'new_genre, 'rating: ' new_rating})
