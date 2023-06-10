@@ -35,6 +35,51 @@ if add_selectbox == "Movie Recommendation":
     sorted_movies = matching_movies.sort_values('rating', ascending=False).head(5)
 
     st.subheader('Your favorite movie genre is ' + selected_genre)
+    
+    # 선택한 장르에 따라 어울리는 이미지 출력
+    if selected_genre == 'Adventure':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Animation':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Children':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Comedy':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Fantasy':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Romance':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Drama':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Action':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Crime':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Thriller':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Horror':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Mystery':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Sci-Fi':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'War':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Musical':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'Documentary':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else if selected_genre == 'IMAX':
+        st.Image('test/toystory.jpg', caption='Image Caption')
+    else
+        st.Image('test/toystory.jpg', caption='Image Caption')
+   
+        
+        
+       
+    
+    
+    
     # Display the top 5 movies with the highest rating from the same genre
     st.subheader('Our top 5 movie picks ')
 
