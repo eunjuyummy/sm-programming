@@ -6,16 +6,13 @@ from PIL import Image
 movie_df = pd.read_csv('test/movie_data.csv')
 
 # Streamlit application settings
-st.title("What's your favorite movie?")
-st.write('Choose your favorite movie')
-
-
+st.title("Movie recommendation system")
 #image = Image.open('sunrise.jpg')
 
 #st.image(image, caption='Sunrise by the mountains')
 
 # User selects a movie
-selected_movie = st.selectbox("What's your favorite movie?", movie_df['title'].unique())
+selected_movie = st.selectbox("list", movie_df['title'].unique())
 
 # Get the genre of the selected movie
 selected_genre = movie_df.loc[movie_df['title'] == selected_movie, 'parsed_genres'].values[0]
