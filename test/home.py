@@ -13,8 +13,11 @@ def button_clicked():
     st.write('이미지 버튼이 클릭되었습니다!')
 
 # 이미지 버튼 생성
-button_image = st.image('test/image/apollo13.jpg', caption='이미지 버튼')
+button_clicked = st.button(label='클릭', key='image_button', help='이미지 버튼', on_click=button_clicked, 
+                           type='default', key_button=0, key_scope='image_button_scope',
+                           help_button='이미지 버튼 도움말', args_button={}, kwargs_button={},
+                           tooltip=None, disabled_button=False, auto_on_click=True,
+                           draggable=True, key_draggable=None)
 
-# 이미지 버튼을 클릭하면 실행될 함수를 버튼에 연결
-if button_image.button('클릭'):
-    button_clicked()
+# 이미지 버튼에 이미지 추가
+button_clicked.image('path/to/image.jpg', width=200, caption='이미지 버튼')
