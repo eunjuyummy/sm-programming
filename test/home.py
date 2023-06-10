@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # 영화 데이터를 읽어온다
-movies_df = pd.read_csv('movie_table.csv')
+movies_df = pd.read_csv('test/movie_data.csv')
 
 # Streamlit 애플리케이션 설정
 st.title('영화 추천 시스템')
