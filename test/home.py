@@ -84,4 +84,4 @@ else:
     new_rating = st.slider('How old are you?', 0.0, 5.0, 0.5)
     # Add the new movie to the DataFrame
     new_movie = {'title': new_title, 'parsed_genres': new_genre, 'rating': new_rating}
-    st.write('new_movie ','title: ', new_title, 'parsed_genres: 'new_genre, 'rating: ' new_rating})
+    st.write('new_movie ','title: ', new_title, 'parsed_genres: ', new_genre, 'rating: ' new_rating})
