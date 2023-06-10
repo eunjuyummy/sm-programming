@@ -1,2 +1,2 @@
-st.header(':gray[All About Movies])
-st.title('Movie Lens  and emojis :sunglasses:')
+st.header('All About Movies :movie_camera:')
+st.title('Movie Lens and emojis :sunglasses:')
