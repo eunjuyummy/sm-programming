@@ -41,39 +41,56 @@ if add_selectbox == "Movie Recommendation":
         image = Image.open('test/image/toystory.jpg')
         st.image(image, caption="This isn't Flying This is falling with style", width=300)
     elif selected_genre == 'Animation':
-        st.Image('test/image/bighero.jpg', caption="I'm not giving up on you.",width=300)
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Children':
-        st.Image('test/image/matilda.jpg', caption='Image Caption')
+        image = Image.open('test/image/matilda.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Comedy':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Fantasy':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Romance':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Drama':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Action':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Crime':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Thriller':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Horror':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Mystery':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Sci-Fi':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'War':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Musical':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Documentary':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'IMAX':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
     else:
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        st.image(image, caption="I'm not giving up on you.", width=300)
    
         
         
