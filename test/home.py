@@ -41,7 +41,7 @@ if add_selectbox == "Movie Recommendation":
         image = Image.open('test/image/toystory.jpg')
         st.image(image, caption="This isn't Flying This is falling with style", width=300)
     elif selected_genre == 'Animation':
-        image = Image.open('test/image/bighero.jpg')I'm not giving up on you.
+        image = Image.open('test/image/bighero.jpg')
         st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Children':
         image = Image.open('test/image/matilda.jpg')I'm not giving up on you.
