@@ -45,12 +45,12 @@ if add_selectbox == "Movie Recommendation":
         st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Children':
         image = Image.open('test/image/matilda.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        st.image(image, caption="matilda.", width=300)
     elif selected_genre == 'Comedy':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/dlu.jpg')
+        st.image(image, caption="Washington's always gotta have a hero", width=300)
     elif selected_genre == 'Fantasy':
-        image = Image.open('test/image/bighero.jpg')
+        image = Image.open('test/image/herry.jpg')
         st.image(image, caption="It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.", width=300)
     elif selected_genre == 'Romance':
         image = Image.open('test/image/titanic.jpg')
@@ -89,8 +89,8 @@ if add_selectbox == "Movie Recommendation":
         image = Image.open('test/image/avarta.jpg')
         st.image(image, caption="All energy is only borrowed and one day you have to give it back", width=300)
     else:
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/noir.jpg')
+        st.image(image, caption="film noir history.", width=300)
    
         
         
