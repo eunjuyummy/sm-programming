@@ -37,13 +37,14 @@ if add_selectbox == "Movie Recommendation":
         st.write('title', row['title'])
         
 if add_selectbox == "Movie Lens":
-    chart_data = pd.DataFrame(
-    np.random.randn(20, 3),
-    columns=['a', 'b', 'c'])
+    st.title("Movie recommendation system")
+    
 
     st.line_chart(chart_data)
 
 if add_selectbox == "Movie Lens":
+    st.title("Movie recommendation system")
     st.subheader('Our top 5 movie picks ')
 else:
+   st.title("Movie recommendation system")
    st.subheader('Our top 5 movie picks ')     
