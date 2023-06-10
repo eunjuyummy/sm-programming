@@ -69,7 +69,7 @@ elif add_selectbox == "Data analytics":
         num += 1
 
     
-elif add_selectbox == "Movie Lens":
+elif add_selectbox == "Movie theater":
     st.title("Movie recommendation system")
     st.subheader('Our top 5 movie picks ')
 
