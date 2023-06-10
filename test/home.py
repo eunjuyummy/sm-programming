@@ -6,8 +6,8 @@ from PIL import Image
 movie_df = pd.read_csv('test/movie_data.csv')
 
 # Streamlit application settings
-st.title('영화 추천 시스템')
-st.write('영화를 선택하세요.')
+st.title("What's your favorite movie?")
+st.write('Choose your favorite movie')
 
 
 #image = Image.open('sunrise.jpg')
