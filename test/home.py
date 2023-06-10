@@ -78,17 +78,6 @@ elif add_selectbox == "Data analytics":
             st.write('--------------------------------')
             num += 1
 
-    
-elif add_selectbox == "News":
-    st.title("What's new in movies")
-    st.header("Open New")
-    # YouTube video URL
-    video_url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-
-    # Display the YouTube video
-    st.write('YouTube Video')
-    IFrame(video_url, width=560, height=315)
-
 else:
    # Streamlit application settings
     st.title('Add a new movie')
@@ -104,3 +93,5 @@ else:
     new_movie = {'title': new_title, 'parsed_genres': new_genre, 'rating': new_rating}
     st.subheader('New Movie')
     st.write('Title: ', new_title, 'Genres: ', new_genre, 'Rating: ', new_rating)
+    
+st.caption('This is _italics_ :blue[the movie lens] where you can learn all about the movie. :sunglasses:')
