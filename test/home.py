@@ -83,10 +83,8 @@ if add_selectbox == "Movie Recommendation":
     
     # Display the top 5 movies with the highest rating from the same genre
     st.header('Our top 5 movie picks ')
-    num = 1
     for index, row in sorted_movies.iterrows():
-        st.subheader('Title', num, row['title'])
-        num += 1
+        st.subheader('Title ', row['title'])
         
         
         
