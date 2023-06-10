@@ -15,7 +15,7 @@ selected_movie = st.selectbox('영화 선택', movies_df['title'].unique())
 selected_genre = movies_df[movies_df['title'] == selected_movie]['parsed_genres'].values[0]
 
 # 같은 장르의 영화 중 평점이 높은 상위 3개를 추천한다
-recommended_movies = movies_df[(movies_df['parsed_genres'] == selected_genre) & (movies_df['rating'] > 8)].nlargest(3, 'rating')
+recommended_movies = movies_df[(movies_df['parsed_genres'] == selected_genre).nlargest(3, 'rating')
 
 # 추천 영화를 출력한다
 st.subheader('추천 영화')
