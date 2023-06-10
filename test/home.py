@@ -12,7 +12,7 @@ st.write('영화를 선택하세요.')
 # User selects a movie
 selected_movie = st.selectbox('영화 선택', movie_df['title'].unique())
 
-movie_df = movie_df[movie_df['title'] != selected_movie]
+#movie_df = movie_df[movie_df['title'] != selected_movie]
 
 matching_movies = movie_df[movie_df['title'] == selected_movie]['title']
 
