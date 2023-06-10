@@ -14,7 +14,7 @@ movie_df = pd.read_csv('test/movie_data.csv')
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
     "Contents",
-    ("Movie Recommendation", "Data analytics", "Movie theater", "Setting")
+    ("Movie Recommendation", "Data analytics", "Setting")
 )
 
 if add_selectbox == "Movie Recommendation":
@@ -99,5 +99,11 @@ st.write('')
 st.write('')
 st.write('')
 st.write('')
-st.write('')   
+st.write('')
+st.write('')
+st.write('')
+st.write('')
+st.write('')
+st.write('')
+st.write('')  
 st.caption('_This is :blue[the movie lens] where you can learn all about the movie._ :sunglasses:')
