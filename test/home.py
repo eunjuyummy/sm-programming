@@ -84,7 +84,7 @@ elif add_selectbox == "Movie theater":
     folium.Marker([37.5649, 126.9982], popup='광화문').add_to(m)
 
     # Display the map in Streamlit
-    st.write(m._repr_html_(), unsafe_allow_html=True)
+    folium_static(m)
 
     
 else:
