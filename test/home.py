@@ -10,7 +10,7 @@ movie_df = pd.read_csv('test/movie_data.csv')
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
     "Contents",
-    ("Movie Recommendation", "Movie Lens", "Movie theater", "My page")
+    ("Movie Recommendation", "Data analytics", "Movie theater", "My page")
 )
 
 if add_selectbox == "Movie Recommendation":
@@ -37,8 +37,9 @@ if add_selectbox == "Movie Recommendation":
     for index, row in sorted_movies.iterrows():
         st.write('title', row['title'])
         
-if add_selectbox == "Movie Lens":
-    st.title("Movie Lens")
+if add_selectbox == "Data analytics":
+    st.title("Data analytics")
+    st.subheader('Count the number of movies per genre')
     # Count the number of movies per genre
     genre_counts = movie_df['parsed_genres'].value_counts()
 
@@ -53,7 +54,17 @@ if add_selectbox == "Movie Lens":
 
     # Display the chart in Streamlit
     st.pyplot(fig)
-
+    
+    st.subheader('TOP 5 highest rated movies')
+    sorted_movies = movie_df.sort_values('rating', ascending=False).head(5)
+    
+    for index, row in sorted_movies.iterrows():
+    st.write('- 영화 제목:', row['title'])
+    st.write('  평점:', row['rating'])
+    st.write('  장르:', row['parsed_genres'])
+    st.write('--------------------------------')
+    
+    
 if add_selectbox == "Movie Lens":
     st.title("Movie recommendation system")
     st.subheader('Our top 5 movie picks ')
