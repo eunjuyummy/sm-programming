@@ -71,7 +71,7 @@ if add_selectbox == "Movie Recommendation":
         st.Image('test/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'IMAX':
         st.Image('test/toystory.jpg', caption='Image Caption')
-    else
+    else:
         st.Image('test/toystory.jpg', caption='Image Caption')
    
         
