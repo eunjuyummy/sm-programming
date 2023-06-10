@@ -83,10 +83,10 @@ if add_selectbox == "Movie Recommendation":
     
     # Display the top 5 movies with the highest rating from the same genre
     st.subheader('Our top 5 movie picks ')
-
+    num = 1
     for index, row in sorted_movies.iterrows():
-        st.write('title', row['title'])
-        
+        st.write('Title', num, row['title'])
+        num += 1
 elif add_selectbox == "Data analytics":
     st.title("Data analytics")
     
