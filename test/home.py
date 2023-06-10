@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pandas as pd
+import folium
 import matplotlib.pyplot as plt
 from PIL import Image
 
@@ -10,7 +11,7 @@ movie_df = pd.read_csv('test/movie_data.csv')
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
     "Contents",
-    ("Movie Recommendation", "Data analytics", "Movie theater", "My page")
+    ("Movie Recommendation", "Data analytics", "Movie theater", "Setting")
 )
 
 if add_selectbox == "Movie Recommendation":
@@ -71,6 +72,20 @@ elif add_selectbox == "Data analytics":
 elif add_selectbox == "Movie Lens":
     st.title("Movie recommendation system")
     st.subheader('Our top 5 movie picks ')
+
+    # Streamlit application settings
+    st.title('지도 시각화')
+
+    # Create a map object using Folium
+    m = folium.Map(location=[37.5665, 126.9780], zoom_start=13)
+
+    # Add markers to the map
+    folium.Marker([37.5665, 126.9780], popup='서울 시청').add_to(m)
+    folium.Marker([37.5649, 126.9982], popup='광화문').add_to(m)
+
+    # Display the map in Streamlit
+    st.write(m._repr_html_(), unsafe_allow_html=True)
+
     
 else:
    # Streamlit application settings
