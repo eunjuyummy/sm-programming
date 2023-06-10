@@ -86,4 +86,4 @@ else:
     # Add the new movie to the DataFrame
     new_movie = {'title': new_title, 'parsed_genres': new_genre, 'rating': new_rating}
     st.subheader('New Movie')
-    st.subheader('title: ', new_title, 'parsed_genres: ', new_genre, 'rating: ', new_rating)
+    st.write('title: ', new_title, 'parsed_genres: ', new_genre, 'rating: ', new_rating)
