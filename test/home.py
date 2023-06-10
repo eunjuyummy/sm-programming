@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from PIL import Image
 
 # Read the movie data
 movie_df = pd.read_csv('test/movie_data.csv')
@@ -20,4 +21,8 @@ button_clicked = st.button(label='클릭', key='image_button', help='이미지 �
                            draggable=True, key_draggable=None)
 
 # 이미지 버튼에 이미지 추가
-button_clicked.image('test/image/apollo13.jpg', width=200, caption='이미지 버튼')
+button_clicked.Image('test/image/apollo13.jpg', width=200, caption='이미지 버튼')
+
+#image = Image.open('sunrise.jpg')
+
+#st.image(image, caption='Sunrise by the mountains')
