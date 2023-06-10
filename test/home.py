@@ -14,7 +14,7 @@ selected_movie = st.selectbox('영화 선택', movie_df['title'].unique())
 
 movie_df = movie_df[movie_df['title'] != selected_movie]
 
-matching_movies = movie_df[movie_df['parsed_genres'] == selected_movie]['title']
+matching_movies = movie_df[movie_df['title'] == selected_movie]['title']
 
 # Display the matching movies
 st.subheader('일치하는 영화')
