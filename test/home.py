@@ -93,4 +93,4 @@ else:
     st.subheader('New Movie')
     st.write('Title: ', new_title, 'Genres: ', new_genre, 'Rating: ', new_rating)
     
-st.caption('This is _italics_ :blue[the movie lens] where you can learn all about the movie. :sunglasses:')
+st.caption('_This is :blue[the movie lens] where you can learn all about the movie._ :sunglasses:')
