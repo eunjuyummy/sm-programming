@@ -38,7 +38,7 @@ if add_selectbox == "Movie Recommendation":
         st.write('title', row['title'])
         
 if add_selectbox == "Movie Lens":
-    st.title("Movie recommendation system")
+    st.title("Movie Lens")
     # Count the number of movies per genre
     genre_counts = movie_df['parsed_genres'].value_counts()
 
@@ -47,8 +47,8 @@ if add_selectbox == "Movie Lens":
     ax.bar(genre_counts.index, genre_counts.values)
 
     # Customize the chart
-    ax.set_xlabel('장르')
-    ax.set_ylabel('영화 수')
+    ax.set_xlabel('genres')
+    ax.set_ylabel('count')
     ax.set_xticklabels(genre_counts.index, rotation=90)
 
     # Display the chart in Streamlit
