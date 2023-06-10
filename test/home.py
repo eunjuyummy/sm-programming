@@ -37,7 +37,7 @@ if add_selectbox == "Movie Recommendation":
     for index, row in sorted_movies.iterrows():
         st.write('title', row['title'])
         
-if add_selectbox == "Data analytics":
+elif add_selectbox == "Data analytics":
     st.title("Data analytics")
     st.subheader('Count the number of movies per genre')
     # Count the number of movies per genre
@@ -68,9 +68,10 @@ if add_selectbox == "Data analytics":
         num += 1
 
     
-if add_selectbox == "Movie Lens":
+elif add_selectbox == "Movie Lens":
     st.title("Movie recommendation system")
     st.subheader('Our top 5 movie picks ')
+    
 else:
    # Streamlit application settings
     st.title('Add a new movie')
