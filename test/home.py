@@ -115,16 +115,16 @@ elif add_selectbox == "Data analytics":
         
         
     with tab2:
-        st.header('TOP 5 highest rated movies')
+        st.subheader('TOP 5 highest rated movies')
         sorted_movies = movie_df.sort_values('rating', ascending=False).head(5)
 
         num = 1
         for index, row in sorted_movies.iterrows():
-            st.subheader('Top', num)
-            st.subheader(' 영화 제목:', row['title'])
-            st.subheader('  평점:', row['rating'])
-            st.subheader('  장르:', row['parsed_genres'])
-            st.subheader('--------------------------------')
+            st.write('Top', num)
+            st.write(' 영화 제목:', row['title'])
+            st.write('  평점:', row['rating'])
+            st.write('  장르:', row['parsed_genres'])
+            st.write('--------------------------------')
             num += 1
 
 else:
