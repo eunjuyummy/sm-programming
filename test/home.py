@@ -4,6 +4,7 @@ import pandas as pd
 import folium
 import matplotlib.pyplot as plt
 from PIL import Image
+from streamlit.components.v1 import IFrame
 
 st.header('All About Movies :movie_camera:')
 st.title('Movie Lens')
@@ -79,18 +80,16 @@ elif add_selectbox == "Data analytics":
             num += 1
 
     
-elif add_selectbox == "Movie theater":
-    st.title("Movie recommendation system")
-    st.subheader('Our top 5 movie picks ')
+elif add_selectbox == "News":
+    st.title("What's new in movies")
+    st.header("Open New")
+    # YouTube video URL
+    video_url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
 
-    # Streamlit application settings
-    st.title('지도 시각화')
-    map_data = pd.DataFrame(
-    np.random.rand(1, 2) / [50, 50] + maplatlon,
-    columns=['lat', 'lon'])
-    st.map(map_data)
+    # Display the YouTube video
+    st.write('YouTube Video')
+    IFrame(video_url, width=560, height=315)
 
-    
 else:
    # Streamlit application settings
     st.title('Add a new movie')
