@@ -3,7 +3,7 @@ import pandas as pd
 
 # Assuming you have the recommended_movies DataFrame
 # Read the movie data
-movies_df = pd.read_csv('영화데이터.csv')
+movies_df = pd.read_csv('test/movie_data.csv')
 
 # Streamlit application settings
 st.title('영화 추천 시스템')
