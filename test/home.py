@@ -1,29 +1,49 @@
 import streamlit as st
 import pandas as pd
+import pandas as pd
 from PIL import Image
 
 # Read the movie data
 movie_df = pd.read_csv('test/movie_data.csv')
 
-# Streamlit application settings
-st.title("Movie recommendation system")
-#image = Image.open('sunrise.jpg')
+# Using object notation
+add_selectbox = st.sidebar.selectbox(
+    "Contents",
+    ("Movie Recommendation", "Movie Lens", "Movie theater", "My page")
+)
 
-#st.image(image, caption='Sunrise by the mountains')
+if add_selectbox == "Movie Recommendation":
+    # Streamlit application settings
+    st.title("Movie recommendation system")
+    #image = Image.open('sunrise.jpg')
 
-# User selects a movie
-selected_movie = st.selectbox("movie list", movie_df['title'].unique())
+    #st.image(image, caption='Sunrise by the mountains')
 
-# Get the genre of the selected movie
-selected_genre = movie_df.loc[movie_df['title'] == selected_movie, 'parsed_genres'].values[0]
+    # User selects a movie
+    selected_movie = st.selectbox("movie list", movie_df['title'].unique())
 
-# Filter movies with the same genre and sort by rating
-matching_movies = movie_df.loc[movie_df['parsed_genres'] == selected_genre]
-sorted_movies = matching_movies.sort_values('rating', ascending=False).head(5)
+    # Get the genre of the selected movie
+    selected_genre = movie_df.loc[movie_df['title'] == selected_movie, 'parsed_genres'].values[0]
 
-st.subheader('Your favorite movie genre is ' + selected_genre)
-# Display the top 5 movies with the highest rating from the same genre
-st.subheader('Our top 5 movie picks ')
+    # Filter movies with the same genre and sort by rating
+    matching_movies = movie_df.loc[movie_df['parsed_genres'] == selected_genre]
+    sorted_movies = matching_movies.sort_values('rating', ascending=False).head(5)
 
-for index, row in sorted_movies.iterrows():
-    st.write('title', row['title'])
+    st.subheader('Your favorite movie genre is ' + selected_genre)
+    # Display the top 5 movies with the highest rating from the same genre
+    st.subheader('Our top 5 movie picks ')
+
+    for index, row in sorted_movies.iterrows():
+        st.write('title', row['title'])
+        
+if add_selectbox == "Movie Lens":
+    chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['a', 'b', 'c'])
+
+    st.line_chart(chart_data)
+
+if add_selectbox == "Movie Lens":
+    st.subheader('Our top 5 movie picks ')
+else:
+   st.subheader('Our top 5 movie picks ')     
