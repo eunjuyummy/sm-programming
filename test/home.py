@@ -40,33 +40,39 @@ if add_selectbox == "Movie Recommendation":
         
 elif add_selectbox == "Data analytics":
     st.title("Data analytics")
-    st.subheader('Count the number of movies per genre')
-    # Count the number of movies per genre
-    genre_counts = movie_df['parsed_genres'].value_counts()
-
-    # Plot the bar chart
-    fig, ax = plt.subplots()
-    ax.bar(genre_counts.index, genre_counts.values)
-
-    # Customize the chart
-    ax.set_xlabel('genres')
-    ax.set_ylabel('count')
-    ax.set_xticklabels(genre_counts.index, rotation=90)
-
-    # Display the chart in Streamlit
-    st.pyplot(fig)
     
-    st.subheader('TOP 5 highest rated movies')
-    sorted_movies = movie_df.sort_values('rating', ascending=False).head(5)
-    
-    num = 1
-    for index, row in sorted_movies.iterrows():
-        st.write('Top', num)
-        st.write(' 영화 제목:', row['title'])
-        st.write('  평점:', row['rating'])
-        st.write('  장르:', row['parsed_genres'])
-        st.write('--------------------------------')
-        num += 1
+    tab1, tab2 = st.tabs(["Count", "Top5"])
+
+    with tab1:
+        st.subheader('Count the number of movies per genre')
+        # Count the number of movies per genre
+        genre_counts = movie_df['parsed_genres'].value_counts()
+
+        # Plot the bar chart
+        fig, ax = plt.subplots()
+        ax.bar(genre_counts.index, genre_counts.values)
+
+        # Customize the chart
+        ax.set_xlabel('genres')
+        ax.set_ylabel('count')
+        ax.set_xticklabels(genre_counts.index, rotation=90)
+
+        # Display the chart in Streamlit
+        st.pyplot(fig)
+        
+        
+    with tab2:
+        st.subheader('TOP 5 highest rated movies')
+        sorted_movies = movie_df.sort_values('rating', ascending=False).head(5)
+
+        num = 1
+        for index, row in sorted_movies.iterrows():
+            st.write('Top', num)
+            st.write(' 영화 제목:', row['title'])
+            st.write('  평점:', row['rating'])
+            st.write('  장르:', row['parsed_genres'])
+            st.write('--------------------------------')
+            num += 1
 
     
 elif add_selectbox == "Movie theater":
