@@ -1,7 +1,4 @@
 streamlit
-tensorflow
 matplotlib
 numpy
-keras
-cv2
-opencv-python
+pandas
