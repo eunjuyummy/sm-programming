@@ -80,8 +80,7 @@ else:
     new_title = st.text_input('영화 제목')
     genres = movie_df['parsed_genres'].unique()
     new_genre = st.selectbox('장르 선택', genres)
-    new_rating = st.number_input('평점', min_value=0.0, max_value=10.0)
-
+    new_rating = st.slider('How old are you?', 0.0, 5.0, 0.5)
     # Add the new movie to the DataFrame
     new_movie = {'title': new_title, 'parsed_genres': new_genre, 'rating': new_rating}
     movie_df = movie_df.append(new_movie, ignore_index=True)
