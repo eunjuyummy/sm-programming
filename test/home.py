@@ -51,43 +51,43 @@ if add_selectbox == "Movie Recommendation":
         st.image(image, caption="I'm not giving up on you.", width=300)
     elif selected_genre == 'Fantasy':
         image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        st.image(image, caption="It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.", width=300)
     elif selected_genre == 'Romance':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/titanic.jpg')
+        st.image(image, caption="I know, only you can do that", width=300)
     elif selected_genre == 'Drama':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/martian.jpg')
+        st.image(image, caption="I don't wanna come off as arrogant here, but I'm best botanist on the planet.", width=300)
     elif selected_genre == 'Action':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/john.jpg')
+        st.image(image, caption="Such is life.", width=300)
     elif selected_genre == 'Crime':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/crime.jpg')
+        st.image(image, caption="To the truth room.", width=300)
     elif selected_genre == 'Thriller':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/us.jpg')
+        st.image(image, caption="us", width=300)
     elif selected_genre == 'Horror':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/us.jpg')
+        st.image(image, caption="us", width=300)
     elif selected_genre == 'Mystery':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/mys.jpg')
+        st.image(image, caption="mystery", width=300)
     elif selected_genre == 'Sci-Fi':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/avarta.jpg')
+        st.image(image, caption="All energy is only borrowed and one day you have to give it back", width=300)
     elif selected_genre == 'War':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/in.jpg')
+        st.image(image, caption="The abandonment of ideals wrinkles the soul.", width=300)
     elif selected_genre == 'Musical':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/lala.jpg')
+        st.image(image, caption="Just go with the flow", width=300)
     elif selected_genre == 'Documentary':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/mar.jpg')
+        st.image(image, caption="March of the Penguins", width=300)
     elif selected_genre == 'IMAX':
-        image = Image.open('test/image/bighero.jpg')
-        st.image(image, caption="I'm not giving up on you.", width=300)
+        image = Image.open('test/image/avarta.jpg')
+        st.image(image, caption="All energy is only borrowed and one day you have to give it back", width=300)
     else:
         image = Image.open('test/image/bighero.jpg')
         st.image(image, caption="I'm not giving up on you.", width=300)
