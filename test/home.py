@@ -59,11 +59,11 @@ if add_selectbox == "Data analytics":
     sorted_movies = movie_df.sort_values('rating', ascending=False).head(5)
     
     for index, row in sorted_movies.iterrows():
-    st.write('- 영화 제목:', row['title'])
-    st.write('  평점:', row['rating'])
-    st.write('  장르:', row['parsed_genres'])
-    st.write('--------------------------------')
-    
+        st.write('- 영화 제목:', row['title'])
+        st.write('  평점:', row['rating'])
+        st.write('  장르:', row['parsed_genres'])
+        st.write('--------------------------------')
+
     
 if add_selectbox == "Movie Lens":
     st.title("Movie recommendation system")
