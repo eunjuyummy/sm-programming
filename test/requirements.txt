@@ -2,5 +2,4 @@ streamlit
 matplotlib
 numpy
 pandas
-folium
-streamlit.components.v1
+
