@@ -9,7 +9,7 @@ st.title('영화 추천 시스템')
 st.write('영화를 선택하세요.')
 
 # User selects three movies
-selected_movies = st.multiselect('영화 선택', [str(title) for title in movie_df['title'].unique()], [], 3)
+selected_movies = st.multiselect('영화 선택', list(movie_df['title'].unique()), [], 3)
 
 if len(selected_movies) == 3:
     # Initialize lists to store matching movies
