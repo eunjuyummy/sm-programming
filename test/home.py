@@ -9,8 +9,10 @@ movie_df = pd.read_csv('test/movie_data.csv')
 st.title('영화 추천 시스템')
 st.write('영화를 선택하세요.')
 
+selected_movie = []
 # User selects a movie
-selected_movie = st.selectbox('영화 선택', movie_df['title'].unique())
+for i in range(3):
+    selected_movie[i] = st.selectbox('영화 선택', movie_df['title'].unique())
 
 fav_genre = movie_df[movie_df['title'] == selected_movie]['parsed_genres']
 #movie_df = movie_df[movie_df['title'] != selected_movie]
