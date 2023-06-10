@@ -13,7 +13,7 @@ def button_clicked():
     st.write('이미지 버튼이 클릭되었습니다!')
 
 # 이미지 버튼 생성
-button_image = st.image('path/to/image.png', caption='이미지 버튼')
+button_image = st.image('test/image/As Above.jfif', caption='이미지 버튼')
 
 # 이미지 버튼을 클릭하면 실행될 함수를 버튼에 연결
 if button_image.button('클릭'):
