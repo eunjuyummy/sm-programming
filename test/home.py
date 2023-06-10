@@ -7,6 +7,7 @@ from PIL import Image
 
 st.header('All About Movies :movie_camera:')
 st.title('Movie Lens')
+st.markdown("<hr>", unsafe_allow_html=True)
 
 # Read the movie data
 movie_df = pd.read_csv('test/movie_data.csv')
