@@ -38,41 +38,41 @@ if add_selectbox == "Movie Recommendation":
     
     # 선택한 장르에 따라 어울리는 이미지 출력
     if selected_genre == 'Adventure':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Animation':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Children':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Comedy':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Fantasy':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Romance':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Drama':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Action':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Crime':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Thriller':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Horror':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Mystery':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Sci-Fi':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'War':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Musical':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Documentary':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'IMAX':
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
     else:
-        st.Image('test/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/toystory.jpg', caption='Image Caption')
    
         
         
