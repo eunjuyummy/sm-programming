@@ -43,7 +43,7 @@ if add_selectbox == "Movie Recommendation":
     elif selected_genre == 'Animation':
         st.Image('test/image/toystory.jpg', caption="I'm not giving up on you.",width=300)
     elif selected_genre == 'Children':
-        st.Image('test/image/toystory.jpg', caption='Image Caption')
+        st.Image('test/image/matilda.jfif', caption='Image Caption')
     elif selected_genre == 'Comedy':
         st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Fantasy':
