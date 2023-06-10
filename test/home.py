@@ -34,7 +34,7 @@ if add_selectbox == "Movie Recommendation":
     matching_movies = movie_df.loc[movie_df['parsed_genres'] == selected_genre]
     sorted_movies = matching_movies.sort_values('rating', ascending=False).head(5)
 
-    st.subheader('Your favorite movie genre is ' + selected_genre)
+    st.subheader('Your favorite movie :blue[genre] is ' + selected_genre)
     
     # 선택한 장르에 따라 어울리는 이미지 출력
     if selected_genre == 'Adventure':
