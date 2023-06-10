@@ -16,7 +16,7 @@ fav_genre = movie_df[movie_df['title'] == selected_movie]['parsed_genres']
 #movie_df = movie_df[movie_df['title'] != selected_movie]
 
 for movie in movie_df:
-    matching_movies += vie_df[movie_df['parsed_genres'] == fav_genre]['title']
+    matching_movies.append(vie_df[movie_df['parsed_genres'] == fav_genre]['title'])
 
 # Display the matching movies
 st.subheader('일치하는 영화')
