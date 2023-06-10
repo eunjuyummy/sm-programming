@@ -5,6 +5,9 @@ import folium
 import matplotlib.pyplot as plt
 from PIL import Image
 
+st.header('All About Movies :movie_camera:')
+st.title('Movie Lens')
+
 # Read the movie data
 movie_df = pd.read_csv('test/movie_data.csv')
 
