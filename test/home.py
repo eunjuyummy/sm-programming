@@ -1,30 +1,50 @@
-import streamlit as st
+import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-from tensorflow.keras.datasets import mnist
+import streamlit as st
 from tensorflow.keras.models import load_model
 
-# MNIST 데이터셋 로드
-(X_train, y_train), (X_test, y_test) = mnist.load_data()
-
 # 학습된 모델 로드
-model = load_model('test/your_model.h5')  # 학습된 모델 파일로 대체해야 함
+model = load_model('your_model.h5')  # 학습된 모델 파일로 대체해야 함
+
+# 카메라로부터 이미지 캡처 함수
+def capture_image():
+    cap = cv2.VideoCapture(0)
+    _, frame = cap.read()
+    cap.release()
+    return frame
+
+# 이미지 전처리 함수
+def preprocess_image(image):
+    # 이미지를 흑백으로 변환
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    # 이미지 크기 조정 및 정규화
+    resized = cv2.resize(gray, (28, 28))
+    normalized = resized / 255.0
+    # 차원 추가 (모델 입력 형태로 변환)
+    processed = np.expand_dims(normalized, axis=0)
+    return processed
+
+# 손글씨 숫자 예측 함수
+def predict_digit(image):
+    processed_image = preprocess_image(image)
+    prediction = model.predict(processed_image)
+    predicted_label = np.argmax(prediction)
+    confidence = np.max(prediction) * 100
+    return predicted_label, confidence
 
 # 앱 제목과 설명
-st.title('MNIST 손글씨 맞추기')
-st.write('이 앱은 0부터 9까지의 손글씨 숫자를 맞추는 데 사용됩니다.')
+st.title('손글씨 숫자 맞추기')
+st.write('카메라로부터 캡처한 손글씨 이미지를 이용하여 숫자를 맞춥니다.')
 
-# 손글씨 숫자 선택
-selected_image = st.selectbox('손글씨 숫자를 선택하세요.', range(10))
+# 카메라로부터 이미지 캡처
+captured_image = capture_image()
 
-# 선택한 숫자에 대한 이미지 표시
-st.image(X_test[selected_image], width=150, caption=f'선택한 숫자: {y_test[selected_image]}')
+# 캡처한 이미지 표시
+st.image(captured_image, channels='BGR', caption='캡처한 이미지')
 
-# 선택한 숫자에 대한 예측 결과
-prediction = model.predict(np.expand_dims(X_test[selected_image], axis=0))
-predicted_label = np.argmax(prediction)
-st.write(f'예측 결과: {predicted_label}')
+# 숫자 예측
+predicted_digit, confidence = predict_digit(captured_image)
 
-# 모델의 신뢰도 점수
-confidence = np.max(prediction) * 100
+# 예측 결과 및 신뢰도 표시
+st.write(f'예측된 숫자: {predicted_digit}')
 st.write(f'신뢰도: {confidence:.2f}%')
