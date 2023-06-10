@@ -29,6 +29,4 @@ st.subheader('Your favorite movie genre is', selected_genre)
 st.subheader('Our top 5 movie picks ')
 
 for index, row in sorted_movies.iterrows():
-    st.write('- 영화 제목:', row['title'])
-    st.write('  평점:', row['rating'])
-    st.write('  장르:', row['parsed_genres'])
+    st.write('title', row['title'])
