@@ -58,7 +58,7 @@ if add_selectbox == "Data analytics":
     st.subheader('TOP 5 highest rated movies')
     sorted_movies = movie_df.sort_values('rating', ascending=False).head(5)
     
-    num = 0
+    num = 1
     for index, row in sorted_movies.iterrows():
         st.write('Top', num)
         st.write(' 영화 제목:', row['title'])
