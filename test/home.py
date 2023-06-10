@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pandas as pd
+import matplotlib.pyplot as plt
 from PIL import Image
 
 # Read the movie data
@@ -38,9 +39,20 @@ if add_selectbox == "Movie Recommendation":
         
 if add_selectbox == "Movie Lens":
     st.title("Movie recommendation system")
-    
+    # Count the number of movies per genre
+    genre_counts = movie_df['parsed_genres'].value_counts()
 
-    st.line_chart(chart_data)
+    # Plot the bar chart
+    fig, ax = plt.subplots()
+    ax.bar(genre_counts.index, genre_counts.values)
+
+    # Customize the chart
+    ax.set_xlabel('장르')
+    ax.set_ylabel('영화 수')
+    ax.set_xticklabels(genre_counts.index, rotation=90)
+
+    # Display the chart in Streamlit
+    st.pyplot(fig)
 
 if add_selectbox == "Movie Lens":
     st.title("Movie recommendation system")
