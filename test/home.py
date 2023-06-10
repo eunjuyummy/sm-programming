@@ -22,5 +22,5 @@ if not selected_movie_data.empty:
 
 # Display the recommended movies
 st.subheader('추천 영화')
-for index, row in recommended_movies.iterrows():
-    st.write('- 제목:', row['영화 제목'], '| 평점:', row['평점'])
+#for index, row in recommended_movies.iterrows():
+#    st.write('- 제목:', row['영화 제목'], '| 평점:', row['평점'])
