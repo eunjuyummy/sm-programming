@@ -20,4 +20,4 @@ button_clicked = st.button(label='클릭', key='image_button', help='이미지 �
                            draggable=True, key_draggable=None)
 
 # 이미지 버튼에 이미지 추가
-button_clicked.image('path/to/image.jpg', width=200, caption='이미지 버튼')
+button_clicked.image('test/image/apollo13.jpg', width=200, caption='이미지 버튼')
