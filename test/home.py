@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
 # 학습된 모델 로드
-model = load_model('your_model.h5')  # 학습된 모델 파일로 대체해야 함
+model = load_model('test/make_mnist_model.py/your_model.h5')  # 학습된 모델 파일로 대체해야 함
 
 # 앱 제목과 설명
 st.title('MNIST 손글씨 맞추기')
