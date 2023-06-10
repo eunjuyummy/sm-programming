@@ -11,18 +11,16 @@ st.write('영화를 선택하세요.')
 
 # 이미지 버튼 클릭 시 실행될 함수
 def button_clicked():
-    st.write('이미지 버튼이 클릭되었습니다!')
+    st.write('Image button clicked!')
 
-# 이미지 버튼 생성
-button_clicked = st.button(label='클릭', key='image_button', help='이미지 버튼', on_click=button_clicked, 
-                           type='default', key_button=0, key_scope='image_button_scope',
-                           help_button='이미지 버튼 도움말', args_button={}, kwargs_button={},
-                           tooltip=None, disabled_button=False, auto_on_click=True,
-                           draggable=True, key_draggable=None)
+# Image button creation
+button_image = st.button(label='Click me!', help='Image button', on_click=button_clicked)
+# Image button with an image
+button_image.image('test/image/apollo13.jpg', caption='Image button')
 
-# 이미지 버튼에 이미지 추가
-button_clicked.Image('test/image/apollo13.jpg', width=200, caption='이미지 버튼')
 
 #image = Image.open('sunrise.jpg')
 
 #st.image(image, caption='Sunrise by the mountains')
+
+
