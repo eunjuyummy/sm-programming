@@ -39,7 +39,7 @@ if add_selectbox == "Movie Recommendation":
     # 선택한 장르에 따라 어울리는 이미지 출력
     if selected_genre == 'Adventure':
         image = Image.open('test/image/toystory.jpg')
-        st.image(image, caption='cute koala')
+        st.image(image, caption='cute koala', width=300)
     elif selected_genre == 'Animation':
         st.Image('test/image/toystory.jpg', caption='Image Caption')
     elif selected_genre == 'Children':
