@@ -13,7 +13,7 @@ st.write('영화를 선택하세요.')
 selected_movie = st.selectbox('영화 선택', movies_df['title'].unique())
 
 # Filter the selected movie from the DataFrame
-selected_movie_data = recommended_movies[movies_df['parsed_genres'] == selected_movie]
+selected_movie_data = recommended_movies[movies_df['title'] == selected_movie]
 
 # Display the selected movie's details
 if not selected_movie_data.empty:
