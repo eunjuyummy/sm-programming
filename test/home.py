@@ -75,16 +75,10 @@ elif add_selectbox == "Movie theater":
 
     # Streamlit application settings
     st.title('지도 시각화')
-
-    # Create a map object using Folium
-    m = folium.Map(location=[37.5665, 126.9780], zoom_start=13)
-
-    # Add markers to the map
-    folium.Marker([37.5665, 126.9780], popup='서울 시청').add_to(m)
-    folium.Marker([37.5649, 126.9982], popup='광화문').add_to(m)
-
-    # Display the map in Streamlit
-    folium_static(m)
+    map_data = pd.DataFrame(
+    np.random.rand(1, 2) / [50, 50] + maplatlon,
+    columns=['lat', 'lon'])
+    st.map(map_data)
 
     
 else:
