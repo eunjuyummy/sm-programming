@@ -159,13 +159,13 @@ def on_button_click():
             st.write('Title: ', new_title, '     Genres: ', new_genre, '     Rating: ', new_rating)
 
 
-# 하단 페이지    
-st.write('')
-st.write('')
-st.write('')
-st.write('')
-st.write('')
-st.caption('_This is :blue[the Movie Lens] where you can find all about the movie._ :sunglasses:')
+    # 하단 페이지    
+    st.write('')
+    st.write('')
+    st.write('')
+    st.write('')
+    st.write('')
+    st.caption('_This is :blue[the Movie Lens] where you can find all about the movie._ :sunglasses:')
     
     
 # 메인 베너를 구현하는 코드 
