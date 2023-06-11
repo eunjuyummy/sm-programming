@@ -1,39 +1,39 @@
+# import 라이브러리
 import streamlit as st
 import pandas as pd
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 
-st.header('All About Movies :movie_camera:')
-st.title('Movie Lens')
+# 메인 베너를 구현하는 코드 
+st.header('All About Movies :movie_camera:')     
+st.title('Movie Lens')                          
 st.markdown("<hr>", unsafe_allow_html=True)
 
-# Read the movie data
+# movie data csv 파일 읽어오는 코드
 movie_df = pd.read_csv('test/movie_data.csv')
 
-# Using object notation
+# 사이드바 구현하는 코드 
 add_selectbox = st.sidebar.selectbox(
     "Contents",
     ("Movie Recommendation", "Data analytics", "Setting")
 )
 
+# Movie Recommendation 페이지 
 if add_selectbox == "Movie Recommendation":
-    # Streamlit application settings
     st.title("Movie recommendation system")
-    #image = Image.open('sunrise.jpg')
-
-    #st.image(image, caption='Sunrise by the mountains')
-
-    # User selects a movie
+    
+    # movie list에서 영화를 선택하는 select box
     selected_movie = st.selectbox("movie list", movie_df['title'].unique())
 
-    # Get the genre of the selected movie
+    # 선택한 영화의 장르를 가져온다
     selected_genre = movie_df.loc[movie_df['title'] == selected_movie, 'parsed_genres'].values[0]
 
-    # Filter movies with the same genre and sort by rating
+    # 같은 장르의 영화를 필터링하고 평점이 높은 순으로 나열해 top5개의 영화만 가져온다
     matching_movies = movie_df.loc[movie_df['parsed_genres'] == selected_genre]
     sorted_movies = matching_movies.sort_values('rating', ascending=False).head(5)
-
+    
+    # User가 선택한 장르를 알려준다.
     st.subheader('Your favorite movie :blue[genre] is ' + selected_genre)
     
     # 선택한 장르에 따라 어울리는 이미지 출력
@@ -92,49 +92,43 @@ if add_selectbox == "Movie Recommendation":
         image = Image.open('test/image/noir.jpg')
         st.image(image, caption="film noir history.", width=300)
    
-        
-        
-       
-    
-    
-    
-    # Display the top 5 movies with the highest rating from the same genre
+    # 동일한 장르에서 평점이 가장 높은 상위 5개의 영화를 보여준다
+    st.subheader('상위 5개의 추천 영화')
     st.subheader('Our top 5 movie picks ')
-    num = 1
+    num = 1                                  
     for index, row in sorted_movies.iterrows():
         st.write(num ,row['title'])
         num += 1
         
         
-        
-        
+# Data analytics 페이지                
 elif add_selectbox == "Data analytics":
     st.title("Data analytics")
-    
+   
+    #  탭 생성
     tab1, tab2 = st.tabs(["Count", "Top5"])
-
+    
+    # tab1
     with tab1:
         st.subheader('Count the number of movies per genre')
-        # Count the number of movies per genre
+        # 장르별 영화 수 세기
         genre_counts = movie_df['parsed_genres'].value_counts()
 
-        # Plot the bar chart
+        # 막대 그래프 그리기
         fig, ax = plt.subplots()
         ax.bar(genre_counts.index, genre_counts.values)
-
-        # Customize the chart
         ax.set_xlabel('genres')
         ax.set_ylabel('count')
         ax.set_xticklabels(genre_counts.index, rotation=90)
-
-        # Display the chart in Streamlit
         st.pyplot(fig)
         
-        
+    # tab2  
     with tab2:
         st.subheader('TOP 5 highest rated movies')
+        # 평점이 높은 순으로 데이터를 정렬하고 가장 높은 5개의 영화를 선택 
         sorted_movies = movie_df.sort_values('rating', ascending=False).head(5)
-
+        
+        # 데이터프레임의 각 행의 인덱스와 해당 행을 가져와 5개의 영화를 순서대로 보여주는 코드 
         num = 1
         for index, row in sorted_movies.iterrows():
             st.write('Top', num)
@@ -144,23 +138,26 @@ elif add_selectbox == "Data analytics":
             st.write('--------------------------------')
             num += 1
 
+
+# setting 페이지           
 else:
-   # Streamlit application settings
     st.title('Add a new movie')
     st.subheader('Movie List')
+    # 데이터 프레임을 보여준다
     st.write(movie_df)
     
-    # Prompt the user for movie details
+    # User로 부터 새로운 정보를 입력 받는 코드 
     new_title = st.text_input('title')
-    genres = movie_df['parsed_genres'].unique()
+    genres = movie_df['parsed_genres'].unique() 
     new_genre = st.selectbox('genres', genres)
-    new_rating = st.slider('How old are you?', 0.0, 5.0, 0.5)
-    # Add the new movie to the DataFrame
-    new_movie = {'title': new_title, 'parsed_genres': new_genre, 'rating': new_rating}
+    new_rating = st.slider('How satisfied were you with the movie?', 0.0, 5.0, 0.5)
+    
+    # 데이터 프레임에 추가할 영화에 대한 정보를 보여준다
+    new_movie = {'title': new_title, 'parsed_genres': new_genre, 'rating': new_rating}  # 구현X
     st.subheader('New Movie')
     st.write('Title: ', new_title, '     Genres: ', new_genre, '     Rating: ', new_rating)
     
-    
+# 하단 페이지    
 st.write('')
 st.write('')
 st.write('')
