@@ -6,6 +6,11 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 def on_button_click():
+    if button_clicked:
+        on_button_click()
+        # 버튼을 삭제합니다.
+        st.empty()
+    
     # movie data csv 파일 읽어오는 코드
     movie_df = pd.read_csv('test/movie_data.csv')
 
