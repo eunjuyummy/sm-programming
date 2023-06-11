@@ -5,12 +5,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 
-def on_button_click():
-    if button_clicked:
-        on_button_click()
-        # 버튼을 삭제합니다.
-        st.empty()
+
     
+    
+# 메인 베너를 구현하는 코드 
+st.header('All About Movies :movie_camera:')     
+st.title('Movie Lens')                          
+st.markdown("<hr>", unsafe_allow_html=True)
+
+if st.button("Dive into the movie", key="my_button"):
+    on_button_click()
+
+while on_button_click():
     # movie data csv 파일 읽어오는 코드
     movie_df = pd.read_csv('test/movie_data.csv')
 
@@ -171,14 +177,3 @@ def on_button_click():
     st.write('')
     st.write('')
     st.caption('_This is :blue[the Movie Lens] where you can find all about the movie._ :sunglasses:')
-    
-    
-# 메인 베너를 구현하는 코드 
-st.header('All About Movies :movie_camera:')     
-st.title('Movie Lens')                          
-st.markdown("<hr>", unsafe_allow_html=True)
-
-if st.button("Dive into the movie", key="my_button"):
-    on_button_click()
-
-
