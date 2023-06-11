@@ -173,7 +173,7 @@ st.header('All About Movies :movie_camera:')
 st.title('Movie Lens')                          
 st.markdown("<hr>", unsafe_allow_html=True)
 
-if st.button("클릭하세요"):
+if st.button("Dive into the movie"):
     on_button_click()
 
 
