@@ -13,10 +13,10 @@ st.header('All About Movies :movie_camera:')
 st.title('Movie Lens')                          
 st.markdown("<hr>", unsafe_allow_html=True)
 
-if st.button("Dive into the movie", key="my_button"):
-    on_button_click()
+button_clicked = st.button("Dive into the movie", key="my_button")
 
-while on_button_click():
+while button_clicked:
+    on_button_click()
     # movie data csv 파일 읽어오는 코드
     movie_df = pd.read_csv('test/movie_data.csv')
 
