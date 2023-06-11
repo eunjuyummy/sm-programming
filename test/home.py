@@ -148,6 +148,9 @@ else:
     
     # User로 부터 새로운 정보를 입력 받는 코드 
     new_title = st.text_input('title')
+    if(new_title == movie_df['title']
+       print("The movie already exists.")
+       
     genres = movie_df['parsed_genres'].unique() 
     new_genre = st.selectbox('genres', genres)
     new_rating = st.slider('How satisfied were you with the movie?', 0.0, 5.0, 0.5)
