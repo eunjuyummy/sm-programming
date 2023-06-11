@@ -149,17 +149,19 @@ else:
     # User로 부터 새로운 정보를 입력 받는 코드 
     new_title = st.text_input('title')
     
+    # 이미 존재하는 영화의 경우 이미 존재한다는 message 출력
     if new_title in movie_df['title'].values:
        st.subheader('The movie already exists.')
-       
-    genres = movie_df['parsed_genres'].unique() 
-    new_genre = st.selectbox('genres', genres)
-    new_rating = st.slider('How satisfied were you with the movie?', 0.0, 5.0, 0.5)
+    else:
+        genres = movie_df['parsed_genres'].unique() 
+        new_genre = st.selectbox('genres', genres)
+        new_rating = st.slider('How satisfied were you with the movie?', 0.0, 5.0, 0.5)
+
+        # 데이터 프레임에 추가할 영화에 대한 정보를 보여준다
+        new_movie = {'title': new_title, 'parsed_genres': new_genre, 'rating': new_rating}  # 구현X
+        st.subheader('New Movie')
+        st.write('Title: ', new_title, '     Genres: ', new_genre, '     Rating: ', new_rating)
     
-    # 데이터 프레임에 추가할 영화에 대한 정보를 보여준다
-    new_movie = {'title': new_title, 'parsed_genres': new_genre, 'rating': new_rating}  # 구현X
-    st.subheader('New Movie')
-    st.write('Title: ', new_title, '     Genres: ', new_genre, '     Rating: ', new_rating)
     
 # 하단 페이지    
 st.write('')
