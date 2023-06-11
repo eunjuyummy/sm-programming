@@ -16,6 +16,7 @@ st.markdown("<hr>", unsafe_allow_html=True)
 button_clicked = st.button("Dive into the movie", key="my_button")
 
 if button_clicked:
+    button_clicked = True
     # movie data csv 파일 읽어오는 코드
     movie_df = pd.read_csv('test/movie_data.csv')
 
