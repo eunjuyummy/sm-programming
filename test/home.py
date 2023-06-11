@@ -138,9 +138,9 @@ elif add_selectbox == "Data analytics":
         num = 1
         for index, row in sorted_movies.iterrows():
             st.write('Top', num)
-            st.write(' 영화 제목:', row['title'])
-            st.write('  평점:', row['rating'])
-            st.write('  장르:', row['parsed_genres'])
+            st.write(' Title:', row['title'])
+            st.write(' Rating:', row['rating'])
+            st.write('  Genres:', row['parsed_genres'])
             st.write('--------------------------------')
             num += 1
 
