@@ -126,7 +126,7 @@ elif add_selectbox == "Data analytics":
     with tab2:
         st.subheader('TOP 5 highest rated movies')
         # 평점이 높은 순으로 데이터를 정렬하고 가장 높은 5개의 영화를 선택 
-        sorted_movies = movie_df.sort_values('rating', ascending=False).head(30
+        sorted_movies = movie_df.sort_values('rating', ascending=False).head(30)
                                                                              
         random_movies = random.sample(sorted_movies, 5)
         
